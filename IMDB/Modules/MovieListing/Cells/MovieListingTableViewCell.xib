@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieListingTableViewCell" rowHeight="191" id="KGk-i7-Jjw" customClass="MovieListingTableViewCell" customModule="IMDB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="191"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413" height="191"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O1e-9w-BDG">
+                        <rect key="frame" x="15" y="15" width="60" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="TyO-jT-cqx"/>
+                            <constraint firstAttribute="width" constant="60" id="osM-kO-XhV"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LtG-Ul-KQa">
+                        <rect key="frame" x="90" y="15" width="308" height="62"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Doctor Strange in the Multiverse of Madness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gm2-Gd-iUN">
+                                <rect key="frame" x="0.0" y="0.0" width="308" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnL-4f-Vch">
+                                <rect key="frame" x="0.0" y="28.5" width="308" height="33.5"/>
+                                <string key="text">Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="O1e-9w-BDG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="6Ht-an-PRv"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LtG-Ul-KQa" secondAttribute="bottom" constant="15" id="6ZC-vY-l7C"/>
+                    <constraint firstItem="LtG-Ul-KQa" firstAttribute="leading" secondItem="O1e-9w-BDG" secondAttribute="trailing" constant="15" id="76a-zt-Ymo"/>
+                    <constraint firstItem="LtG-Ul-KQa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="8b3-5u-nev"/>
+                    <constraint firstItem="O1e-9w-BDG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="8p5-wB-sTT"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="O1e-9w-BDG" secondAttribute="bottom" constant="15" id="VgI-yj-0YM"/>
+                    <constraint firstAttribute="trailing" secondItem="LtG-Ul-KQa" secondAttribute="trailing" constant="15" id="mQL-J7-CWy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieImageView" destination="O1e-9w-BDG" id="WyC-fD-uh6"/>
+                <outlet property="subtitleLabel" destination="xnL-4f-Vch" id="sGc-Zg-aCm"/>
+                <outlet property="titleLabel" destination="gm2-Gd-iUN" id="BR7-Ff-HWB"/>
+            </connections>
+            <point key="canvasLocation" x="180.43478260869566" y="138.95089285714286"/>
+        </tableViewCell>
+    </objects>
+</document>
